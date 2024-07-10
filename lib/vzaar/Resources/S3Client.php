@@ -125,7 +125,7 @@ class S3Client
                 throw new S3uploadEx($msg);
             }
         } else {
-            $data['file'] = new \CURLFile($data['file']);
+            $data['file'] = new \CURLFile($data['file'], null, $filename);
 
             $cfg['data'] = $data;
 
